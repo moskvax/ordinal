@@ -186,11 +186,8 @@ class OrdinalProcessorTest {
             public val UhOh.Nice.ordinal: Int
               inline get() = 2
 
-            public val UhOh.NotCool.ordinal: Int
-              inline get() = 3
-
             public val UhOh.Weh.ordinal: Int
-              inline get() = 4
+              inline get() = 3
             """.trimIndent(),
             result["UhOhExt.kt"]
         )
@@ -229,11 +226,8 @@ class OrdinalProcessorTest {
             public val UhOh.Nice.ordinal: Int
               inline get() = 2
 
-            public val UhOh.NotCool.ordinal: Int
-              inline get() = 3
-
             public val UhOh.Weh.ordinal: Int
-              inline get() = 4
+              inline get() = 3
             """.trimIndent(),
             result["UhOhExt.kt"]
         )

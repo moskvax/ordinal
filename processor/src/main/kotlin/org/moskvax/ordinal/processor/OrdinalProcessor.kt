@@ -71,8 +71,8 @@ class OrdinalProcessor(
                 "${classDeclaration.simpleName.asString()}Ext"
             ).apply {
                 classDeclaration.getSealedSubclasses().forEach { sealedSubclass ->
-                    if (sealedSubclass.isSealed && recursive) {
-                        visitClassDeclaration(sealedSubclass, Unit)
+                    if (sealedSubclass.isSealed) {
+                        if (recursive) visitClassDeclaration(sealedSubclass, Unit)
                     } else {
                         val ordinalGetter = FunSpec.getterBuilder()
                             .addModifiers(KModifier.INLINE)
